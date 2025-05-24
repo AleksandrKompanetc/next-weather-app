@@ -1,3 +1,5 @@
+'use client'
+
 import Head from "next/head"
 import Image from "next/image"
 import axios from "axios"
@@ -8,8 +10,17 @@ export default function Home() {
 
   const [city, setCity] = useState('')
   const [weather, setWeather] = useState({})
+  const [loading, setLoading] = useState(false)
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=dubai&units=imperial&lat={lat}&lon={lon}&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`
+
+  const fetchWeather = (e) => {
+    e.preventDefault()
+    setLoading(true)
+    axios.get(url).then((response) => {
+      setWeather(response.data)
+    })
+  }
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center text-blue-600 font-bold justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
