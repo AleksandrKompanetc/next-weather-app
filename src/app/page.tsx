@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&lat={lat}&lon={lon}&appid=150a49263a5b1ff973b07348fc7e8bda`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=dubai&units=imperial&lat={lat}&lon={lon}&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center text-blue-600 font-bold justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
