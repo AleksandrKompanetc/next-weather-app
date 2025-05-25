@@ -19,7 +19,10 @@ export default function Home() {
     setLoading(true)
     axios.get(url).then((response) => {
       setWeather(response.data)
+      console.log(response.data)
     })
+    setCity('')
+    setLoading(false)
   }
 
   return (
@@ -30,7 +33,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Hello</h1>
+      <Image src='https://unsplash.com/photos/green-trees-on-mountain-under-cloudy-sky-during-daytime-kcvlb727mn8' layout="fill" />
     </div>
   );
 }
