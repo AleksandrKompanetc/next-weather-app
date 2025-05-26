@@ -4,7 +4,7 @@ import Head from "next/head"
 import Image from "next/image"
 import axios from "axios"
 import { useState } from "react"
-import BsSearch from "react-icons/bs"
+import { BsSearch }from "react-icons/bs"
 
 export default function Home() {
 
@@ -39,9 +39,9 @@ export default function Home() {
       <div>
         <form action="">
           <div>
-            <input type="text" />
+            <input type="text" placeholder="Search sity" />
           </div>
-          <button></button>
+          <button onClick={fetchWeather}><BsSearch /></button>
         </form>
       </div>
     </div>
