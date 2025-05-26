@@ -37,9 +37,9 @@ export default function Home() {
       <Image src='https://images.unsplash.com/photo-1506744038136-46273834b3fb' alt="weather" layout="fill" className="object-cover" />
 
       <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
-        <form action="">
+        <form className="flex justify-between items-center w-full m-auto p-3 bg-transparent border border-gray-300 text-white rounded-2xl">
           <div>
-            <input type="text" placeholder="Search sity" />
+            <input className="bg-transparent border-none text-white focus:outline-none text-2xl" type="text" placeholder="Search sity" />
           </div>
           <button onClick={fetchWeather}><BsSearch /></button>
         </form>
