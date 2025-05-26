@@ -36,7 +36,7 @@ export default function Home() {
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/40 z-[1]" />
       <Image src='https://images.unsplash.com/photo-1506744038136-46273834b3fb' alt="weather" layout="fill" className="object-cover" />
 
-      <div>
+      <div className="relative flex justify-between items-center max-w-[500px] w-full m-auto pt-4 text-white z-10">
         <form action="">
           <div>
             <input type="text" placeholder="Search sity" />
