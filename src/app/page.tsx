@@ -5,6 +5,7 @@ import Image from "next/image"
 import axios from "axios"
 import { useState } from "react"
 import { BsSearch }from "react-icons/bs"
+import Weather from '../../components/Weather'
 
 export default function Home() {
 
@@ -19,7 +20,6 @@ export default function Home() {
     setLoading(true)
     axios.get(url).then((response) => {
       setWeather(response.data)
-      console.log(response.data)
     })
     setCity('')
     setLoading(false)
@@ -52,6 +52,8 @@ export default function Home() {
             </button>
         </form>
       </div>
+
+      {weather.main && <Weather data={weather} />}
     </div>
   );
 }
