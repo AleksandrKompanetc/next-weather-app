@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Weather = ({data}) => {
   console.log(data)
   return (
-    <div>
+    <div className='relative flex flex-col justify-between max-w-[500px] w-full h-[90vh] m-auto p-4'>
       <div>
         <div>
           <Image 
