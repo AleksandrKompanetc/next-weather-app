@@ -23,6 +23,15 @@ const Weather = ({data}) => {
         <div>
           <div>
             <p>{data.main.feels_like.toFixed(0)}&#176;</p>
+            <p>Feels Like</p>
+          </div>
+          <div>
+            <p>{data.main.feels_like.toFixed(0)}&#176;</p>
+            <p>Feels Like</p>
+          </div>
+          <div>
+            <p>{data.main.feels_like.toFixed(0)}&#176;</p>
+            <p>Feels Like</p>
           </div>
         </div>
       </div>
