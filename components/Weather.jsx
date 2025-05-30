@@ -23,15 +23,15 @@ const Weather = ({data}) => {
         <div className='flex justify-between text-center'>
           <div>
             <p className='font-bold text-2xl'>{data.main.feels_like.toFixed(0)}&#176;</p>
-            <p>Feels Like</p>
+            <p className='text-xl'>Feels Like</p>
           </div>
           <div>
             <p className='font-bold text-2xl'>{data.main.humidity}%</p>
-            <p>Humidity</p>
+            <p className='text-xl'>Humidity</p>
           </div>
           <div>
             <p className='font-bold text-2xl'>{data.wind.speed.toFixed(0)} MPH</p>
-            <p>Winds</p>
+            <p className='text-xl'>Winds</p>
           </div>
         </div>
       </div>
